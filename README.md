@@ -1,5 +1,8 @@
 API Gateway Simulation is a simulation built using HTML, CSS, and JavaScript. It demonstrates core features such as JWT authentication, per-user rate limiting, and service health monitoring in an interactive dashboard.
 
+Live Demo:
+Try the project live here: https://deeptisingh27.github.io/api-gateway-simulation/
+
 Features:
 1) JWT Authentication Simulation: Login generates a fake token.
 2) Per-user Rate Limiting: Users can make a limited number of requests, displayed with a progress bar.
