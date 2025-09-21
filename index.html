@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Gateway (Frontend Demo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>API Gateway</h2>
+        <ul>
+            <li><a href="#auth">Auth</a></li>
+            <li><a href="#rate">Rate Limit</a></li>
+            <li><a href="#health">Health</a></li>
+        </ul>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </nav>
+
+    <header>
+        <h1>API Gateway Dashboard</h1>
+    </header>
+
+    <main>
+        <section class="card" id="auth">
+            <h2>Centralized Authentication (JWT)</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <button onclick="login()">Login</button>
+            <p id="authStatus">Not authenticated!</p>
+        </section>
+
+        <section class="card" id="rate">
+            <h2>Per-user Rate Limiting</h2>
+            <button onclick="sendRequest()">Send Request</button>
+            <p id="rateStatus">Requests left: 5</p>
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+
+        <section class="card" id="health">
+            <h2>Service Health Checks</h2>
+            <div class="services">
+                <div class="service" id="service1">User Service: <span>Checking...</span></div>
+                <div class="service" id="service2">Payment Service: <span>Checking...</span></div>
+                <div class="service" id="service3">Notification Service: <span>Checking...</span></div>
+            </div>
+            <button onclick="checkServices()">Check Health</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Frontend Simulation of API Gateway</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
